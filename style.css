@@ -1,0 +1,142 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial, sans-serif;
+    background-color:whitesmoke;
+    color:black;
+    line-height:1.6;
+    padding:20px;
+}
+nav{
+    background-color:black;
+    padding:10px;
+    text-align:center;
+    border-radius:10px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:14px 20px;
+    font-size:18px;
+    margin-right:10px;
+}
+h2{
+    text-align:center;
+    font-size:24px;
+    margin-bottom:10px;
+}
+/* Wrapper for the layout using grid template areas */
+.main-layout{
+    display:grid;
+    grid-template-areas: 
+        "profile skills"
+        "projects projects "
+        "education experience"
+        "certification blogs"
+        "contact social";
+    grid-gap:10px;
+    margin-bottom:20px;
+}
+/* Define grid areas */
+.profile{
+    grid-area:profile;
+}
+.skills{
+    grid-area:skills;
+}
+.projects{
+    grid-area:projects;
+}
+.education{
+    grid-area:education;
+}
+.experience{
+    grid-area:experience;
+}
+.certification{
+    grid-area:certification;
+}
+.blogs{
+    grid-area:blogs;
+}
+.contact{
+    grid-area:contact;
+}
+.social{
+    grid-area:social;
+}
+/* Adding borders and padding for each of the section */
+.profile, .skills, .project, .education, .experience, .certification, .blogs, .contact, .social {
+    border:2px solid lightgrey;/* Border for each section */
+    padding:20px;
+    background-color:white;
+   text-align:center;
+    border-radius:10px;    
+}
+.profile img, .skills img, .project img, .education img, .experience img, .certification img, .blogs img, .contact img, .social img {
+    border-radius:10px; /* Rounded corners specially to the images*/
+}
+/* Image section */
+.section-image {
+    width:10%;
+    height:30%;
+    margin-bottom:10px; /* text below images */
+    border-radius:5px;
+}
+
+/* In this project section row contains projects of 1,2,3*/
+.projects-container{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr; /* Three equal columns for projects */
+    grid-gap:20px; /* Space between projects */
+}
+.project {
+    border:2px solid lightgrey;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+    background-color:white;
+}
+/* Social Links */
+.social a{
+    text-decoration:none;
+    color:black;
+    margin-right:10px;
+    font-weight:bold;
+}
+@media only screen and(max-width: 1000px) {
+    .main-layout{
+        grid-template-areas:
+            "profile"
+            "skills"
+            "projects"
+            "education"
+            "experience"
+            "certification"
+            "blogs"
+            "contact"
+            "social"; /*  vertically stack on the smaller screen */
+    }
+    .projects-container{
+        grid-template-columns:1fr; /*vertically projects on small screen*/
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
