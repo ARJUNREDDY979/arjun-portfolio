@@ -1,130 +1,97 @@
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-body{
-    font-family:Arial, sans-serif;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color:whitesmoke;
-    color:black;
-    line-height:1.6;
-    padding:20px;
 }
-nav{
-    background-color:black;
-    padding:10px;
-    text-align:center;
-    border-radius:10px;
+nav {
+    background-color: black; 
+    color: white;
+    padding: 10px;
+    text-align: center;
 }
-nav a{
-    color:white;
-    text-decoration:none;
-    padding:14px 20px;
-    font-size:18px;
-    margin-right:10px;
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
 }
-h2{
-    text-align:center;
-    font-size:24px;
-    margin-bottom:10px;
+nav a:hover {
+    background-color: black; 
 }
-/* Wrapper for the layout using grid template areas */
-.main-layout{
-    display:grid;
-    grid-template-areas: 
-        "profile skills"
-        "projects projects "
-        "education experience"
-        "certification blogs"
-        "contact social";
-    grid-gap:10px;
-    margin-bottom:20px;
+h2,h3{
+    margin-top: 5px;
+    text-align: center;
 }
-/* Define grid areas */
+.main-layout {
+    width: 1200px; 
+    margin: 0 auto; 
+}
 .profile{
-    grid-area:profile;
+    float: left; 
+    width: 380px; 
+    height: 250px; 
+    margin: 10px; 
+    border: 2px solid lightgrey; 
+    padding: 20px; 
+    background-color:whitesmoke;
+    border-radius: 10px; 
+    box-sizing: border-box; 
 }
 .skills{
-    grid-area:skills;
+    float: left; 
+    width: 780px; 
+    height: 250px; 
+    margin: 10px; 
+    border: 2px solid lightgrey; 
+    padding: 20px; 
+    background-color:whitesmoke;
+    border-radius: 10px; 
+    box-sizing: border-box; 
 }
-.projects{
-    grid-area:projects;
+.education, .experience, .certification, .blogs, .contact, .social {
+    float: left; 
+    width: 580px; 
+    height: 250px; 
+    margin: 10px; 
+    border: 2px solid lightgrey; 
+    padding: 20px; 
+    background-color:whitesmoke;
+    border-radius: 10px; 
+    box-sizing: border-box; 
 }
-.education{
-    grid-area:education;
+.projects-container {
+    overflow: auto;
 }
-.experience{
-    grid-area:experience;
+.project  {
+    width: 380px; 
+    height: 220px; 
+    float: left; 
+    margin: 10px;
+    border: 2px solid lightgrey; 
+    padding: 10px; 
+    background-color: whitesmoke; 
+    border-radius: 10px; 
+    box-sizing: border-box; 
 }
-.certification{
-    grid-area:certification;
+.projects h2{
+    margin: 0;
 }
-.blogs{
-    grid-area:blogs;
-}
-.contact{
-    grid-area:contact;
-}
-.social{
-    grid-area:social;
-}
-/* Adding borders and padding for each of the section */
-.profile, .skills, .project, .education, .experience, .certification, .blogs, .contact, .social {
-    border:2px solid lightgrey;/* Border for each section */
-    padding:20px;
-    background-color:white;
-   text-align:center;
-    border-radius:10px;    
-}
-.profile img, .skills img, .project img, .education img, .experience img, .certification img, .blogs img, .contact img, .social img {
-    border-radius:10px; /* Rounded corners specially to the images*/
-}
-/* Image section */
 .section-image {
-    width:10%;
-    height:30%;
-    margin-bottom:10px; /* text below images */
-    border-radius:5px;
+    text-align:center;
+    float: inline-start;
+    width: 55px; 
+    height: 55px;
+    border-radius: 10px;
 }
 
-/* In this project section row contains projects of 1,2,3*/
-.projects-container{
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr; /* Three equal columns for projects */
-    grid-gap:20px; /* Space between projects */
-}
-.project {
-    border:2px solid lightgrey;
-    padding:20px;
-    text-align:center;
-    border-radius:10px;
-    background-color:white;
-}
 /* Social Links */
-.social a{
-    text-decoration:none;
-    color:black;
-    margin-right:10px;
-    font-weight:bold;
+.social a {
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+    font-weight: bold;
 }
-@media only screen and(max-width: 1000px) {
-    .main-layout{
-        grid-template-areas:
-            "profile"
-            "skills"
-            "projects"
-            "education"
-            "experience"
-            "certification"
-            "blogs"
-            "contact"
-            "social"; /*  vertically stack on the smaller screen */
-    }
-    .projects-container{
-        grid-template-columns:1fr; /*vertically projects on small screen*/
-    }
-}
+
 
 
 
